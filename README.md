@@ -1,4 +1,7 @@
 # CST-391 Milestone
+[https://github.com/ktbloomq/CST-391-milestone](https://github.com/ktbloomq/CST-391-milestone)
+
+Prayers social platform 
 ## Introduction
 My proposed app will be a public prayer request app. This app will let users send and receive prayer requests. When they post, they can decide weather or not to post anonymously. These prayers can be seen through a public feed and a friends feed. When users pray over that person, they can mark as prayed, or leave a reply.
 
