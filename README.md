@@ -1,7 +1,18 @@
 # CST-391 Milestone
 [https://github.com/ktbloomq/CST-391-milestone](https://github.com/ktbloomq/CST-391-milestone)
 
+
 Prayers social platform 
+
+## Contents
+- [Introduction](#introduction)
+- [Functionality Requirements](#functionality-requirements)
+- [Initial Database Design](#initial-database-design)
+- [Initial UI Sitemap](#initial-ui-sitemap)
+- [Initial UI Wireframes](#initial-ui-wireframes)
+- [Initial API Endpoints](#initial-api-endpoints)
+- [Known Risks](#known-risks)
+
 ## Introduction
 My proposed app will be a public prayer request app. This app will let users send and receive prayer requests. When they post, they can decide weather or not to post anonymously. These prayers can be seen through a public feed and a friends feed. When users pray over that person, they can mark as prayed, or leave a reply.
 
@@ -26,5 +37,21 @@ My proposed app will be a public prayer request app. This app will let users sen
 
 ![homepage](./wireframe.drawio.png)
 
-## Risks
+## Initial API Endpoints
+
+IMPORTANT! These endpoints are for testing purposes only. They currently represent an insecure api where anyone has permission to do anything. Security will be added in coming updates.
+
+| | Endpoint | Description |
+| - | - | - |
+| GET | localhost/api/prayers | get all prayers
+| GET | localhost/api/prayers/userID | get all prayers from user
+| GET | localhost/api/prayers/id | get prayer from id
+| POST | localhost/api/prayers | post a prayer
+| POST | localhost/api/prayers/id | reply to a prayer by id
+| DELETE | localhost/api/prayers/id | delete prayer
+| GET | localhost/api/friends/id | list all friends of user by id
+| POST | localhost/api/friends/id | add friend to user
+| DELETE | localhost/api/friends?userID=&friendID= | remove friend
+
+## Known Risks
 The primary risk of this app will be security. Especially, making sure users who wish to stay anonymous. There are countless numbers of people tangled up in messy situations. Having a secure and anonymous platform, they can share their struggles without risking their safety.
