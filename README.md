@@ -47,12 +47,8 @@ IMPORTANT! These endpoints are for testing purposes only. They currently represe
 | GET | localhost/api/prayers?postId= | get prayer from id
 | GET | localhost/api/prayers?userId= | get all prayers from user
 | POST | localhost/api/prayers | post a prayer
-| POST | localhost/api/prayers/id | reply to a prayer by id
 | PUT | localhost/api/prayers | update prayer
 | DELETE | localhost/api/prayers/id | delete prayer
-| GET | localhost/api/friends/id | list all friends of user by id
-| POST | localhost/api/friends/id | add friend to user
-| DELETE | localhost/api/friends?userID=&friendID= | remove friend
 
 ## Known Risks
 The primary risk of this app will be security. Especially, making sure users who wish to stay anonymous. There are countless numbers of people tangled up in messy situations. Having a secure and anonymous platform, they can share their struggles without risking their safety.
