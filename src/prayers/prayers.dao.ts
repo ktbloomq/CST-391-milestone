@@ -7,8 +7,8 @@ export const readPrayers = async () => {
   return execute<Prayer[]>(prayerQueries.readPrayers, []);  
 };
 
-export const readPrayersById = async (prayerId: number) => {
-  return execute<Prayer[]>(prayerQueries.readPrayersById, [prayerId]);
+export const readPrayersById = async (postID: number) => {
+  return execute<Prayer[]>(prayerQueries.readPrayersById, [postID]);
 };
 
 export const readPrayersByUserId = async (userID:number) => {
@@ -23,6 +23,6 @@ export const updatePrayer = async (prayer:Prayer) => {
   return execute<OkPacket>(prayerQueries.updatePrayer, [prayer.content, prayer.postID]);
 };
 
-export const deletePrayer = async (postId:Number) => {
-  return execute<OkPacket>(prayerQueries.deletePrayer, [postId]);
+export const deletePrayer = async (postID:Number) => {
+  return execute<OkPacket>(prayerQueries.deletePrayer, [postID]);
 };

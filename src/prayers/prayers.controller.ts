@@ -5,15 +5,15 @@ import { OkPacket } from "mysql";
 export const readPrayers: RequestHandler = async (req: Request, res: Response) => {
     try {
         let prayers;
-        let postId = parseInt(req.query.postId as string);
-        let userId = parseInt(req.query.userId as string);
+        let postID = parseInt(req.query.postID as string);
+        let userID = parseInt(req.query.userID as string);
 
-        // console.log('prayerId ', postId);
-        // console.log('userId', userId);
-        if(Number.isInteger(postId)) {
-            prayers = await PrayerDao.readPrayersById(postId);
-        } else  if(Number.isInteger(userId)) {
-            prayers = await PrayerDao.readPrayersByUserId(userId);
+        // console.log('postID ', postID);
+        // console.log('userID', userID);
+        if(Number.isInteger(postID)) {
+            prayers = await PrayerDao.readPrayersById(postID);
+        } else  if(Number.isInteger(userID)) {
+            prayers = await PrayerDao.readPrayersByUserId(userID);
         } else {
             prayers = await PrayerDao.readPrayers();
         }
@@ -79,10 +79,10 @@ export const deletePrayer: RequestHandler = async (req:Request, res:Response) =>
 
 /*
 const PRAYERS = [
-    {id: 1, userId: 1, content: 'test1', prayers: 1, parentPost: null},
-    {id: 2, userId: 2, content: 'test2', prayers: 2, parentPost: null},
-    {id: 3, userId: 3, content: 'test3', prayers: 3, parentPost: null},
-    {id: 4, userId: 4, content: 'test4', prayers: 4, parentPost: null},
+    {id: 1, userID: 1, content: 'test1', prayers: 1, parentPost: null},
+    {id: 2, userID: 2, content: 'test2', prayers: 2, parentPost: null},
+    {id: 3, userID: 3, content: 'test3', prayers: 3, parentPost: null},
+    {id: 4, userID: 4, content: 'test4', prayers: 4, parentPost: null},
 ];
 
 export const getPrayers = ( req: Request, res: Response) => {

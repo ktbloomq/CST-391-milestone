@@ -44,8 +44,8 @@ IMPORTANT! These endpoints are for testing purposes only. They currently represe
 | | Endpoint | Description |
 | - | - | - |
 | GET | localhost/api/prayers | get all prayers
-| GET | localhost/api/prayers?postId= | get prayer from id
-| GET | localhost/api/prayers?userId= | get all prayers from user
+| GET | localhost/api/prayers?postID= | get prayer from id
+| GET | localhost/api/prayers?userID= | get all prayers from user
 | POST | localhost/api/prayers | post a prayer
 | PUT | localhost/api/prayers | update prayer
 | DELETE | localhost/api/prayers/id | delete prayer
