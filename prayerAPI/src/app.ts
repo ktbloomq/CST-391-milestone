@@ -20,7 +20,7 @@ if(process.env.NODE_ENV == 'development') {
     console.log(process.env.GREETING + ' in dev mode');
 }
 
-app.use('/api', [prayersRouter]);
+app.use('/', [prayersRouter]);
 
 app.listen(port, () => {
     // indicate that the server is initialized
