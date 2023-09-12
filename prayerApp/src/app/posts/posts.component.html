@@ -10,6 +10,7 @@
 <div *ngFor="let post of posts" class="card m-3">
     <div class="card-body">
         <h5 class="card-title"> user {{post.userID}} </h5>
-        <div class="card-text"> {{post.content}} </div>
+        <p class="card-text"> {{post.content}} </p>
+        <a href="#" class="btn btn-outline-primary float-end">🙏 {{post.likes}} </a>
     </div>
 </div>
