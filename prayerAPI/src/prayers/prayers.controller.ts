@@ -27,6 +27,24 @@ export const readPrayers: RequestHandler = async (req: Request, res: Response) =
     }
 };
 
+export const pray: RequestHandler = async (req:Request, res:Response) => {
+    try {
+        let postID = parseInt(req.params.postID as string);
+        if(!Number.isNaN(postID)) {
+            const okPacket: OkPacket = await PrayerDao.pray(postID);
+
+            res.status(200).json(okPacket);
+        } else {
+            throw new Error('Integer expected for postID');
+        }
+    } catch(error) {
+        console.error('[prayer.controller][deletePrayer][Error] ', error);
+        res.status(500).json({
+            message: 'There was an error deleting prayers'
+        });
+    }
+}
+
 export const createPrayer: RequestHandler = async (req:Request, res: Response) => {
     try {
         // console.log('req.body', req.body);

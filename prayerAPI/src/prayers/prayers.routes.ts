@@ -13,6 +13,11 @@ router
     .route('/prayers')
     .get(PrayersController.readPrayers);
 
+// mark prayed
+router
+    .route('/pray/:postID')
+    .put(PrayersController.pray);
+
 // create prayer
 router
     .route('/prayers')
