@@ -11,6 +11,6 @@
     <div class="card-body">
         <h5 class="card-title"> user {{post.userID}} </h5>
         <p class="card-text"> {{post.content}} </p>
-        <a href="#" class="btn btn-outline-primary float-end">🙏 {{post.likes}} </a>
+        <button href="#" class="btn btn-outline-primary float-end" (click)="onLike(post)">🙏 {{post.likes}} </button>
     </div>
 </div>

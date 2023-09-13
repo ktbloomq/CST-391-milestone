@@ -21,4 +21,11 @@ export class PostsComponent {
     });
     console.log("posts", this.posts);
   }
+
+  public onLike(post: Post) {
+    post.likes++;
+    this.service.like(post.postID, (postID: number) => {
+      console.log("liked post " + post.postID);
+    });
+  }
 }
