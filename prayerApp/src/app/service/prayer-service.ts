@@ -31,4 +31,11 @@ export class PrayerService {
 			callback(post);
 		});
 	}
+
+	public deletePost(postID: number, callback:(postID: number) => void): void {
+		this.http.delete(this.host + "/prayers/" + postID).
+		subscribe((data) => {
+			callback(postID);
+		});
+	}
 }

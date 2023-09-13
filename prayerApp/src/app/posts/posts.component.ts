@@ -28,4 +28,12 @@ export class PostsComponent {
       console.log("liked post " + post.postID);
     });
   }
+
+  onDelete(post: Post) {
+    const index = this.posts.indexOf(post);
+    this.service.deletePost(post.postID, (postID: number) => {
+      console.log("deletd post", post.postID);
+    });
+    this.posts.splice(index);
+  }
 }
