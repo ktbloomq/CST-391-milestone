@@ -24,4 +24,11 @@ export class PrayerService {
 			callback(postID);
 		});
 	}
+
+	public createPost(post: Post, callback:(post: Post) => void): void {
+		this.http.post(this.host + "/prayers", post).
+		subscribe((data) => {
+			callback(post);
+		});
+	}
 }

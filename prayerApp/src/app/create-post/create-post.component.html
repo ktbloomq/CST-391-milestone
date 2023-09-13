@@ -1,0 +1,11 @@
+<div class="form-container m-3">
+	<form (ngSubmit)="onSubmit()" #createForm="ngForm">
+		<div class="form-group">
+			<textarea id="content" rows="3" class="form-control"
+				aria-describedby="helpTracks"
+				placeholder="Create a prayer request"
+				required [(ngModel)]="content" name="content"></textarea>
+		</div>
+		<button type="submit" class="btn btn-primary my-2">Submit</button>
+	</form>
+</div>
