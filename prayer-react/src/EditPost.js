@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import dataSource from "./dataSource";
 
 const EditPost = function (props) {
@@ -6,6 +8,7 @@ const EditPost = function (props) {
     const [content, setContent] = useState('');
     const [likes, setLikes] = useState(0);
     const [parent_post, set_parent_post] = useState(null);
+    const navigate = useNavigate();
 
     let _post = {
         userID: 1,
@@ -37,6 +40,7 @@ const EditPost = function (props) {
         }
         console.log(response);
         console.log(response.data);
+        props.onEditPost(navigate);
     };
 
     const handleFormSubmit = function(event) {

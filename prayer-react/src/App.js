@@ -8,23 +8,32 @@ import EditPost from "./EditPost";
 
 function App() {
   const [postList, setPostList] = useState([]);
-  const loadAlbums = async () => {
+  const loadPosts = async () => {
     const response = await dataSource.get("/prayers");
 
     setPostList(response.data);
     // console.log('posts', response.data);
   };
 
+  const onEditPost = function(navigate) {
+    loadPosts();
+    navigate('/');
+  }
+
+  const onDelete = function() {
+    loadPosts();
+  }
+
   useEffect(() => {
-    loadAlbums();
+    loadPosts();
   }, []);
 
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<PostList posts={postList} />} />
-        <Route exact path="/new" element={<EditPost />} />
+        <Route exact path="/" element={<PostList posts={postList} onDelete={onDelete} />} />
+        <Route exact path="/new" element={<EditPost onEditPost={onEditPost} />} />
       </Routes>
     </BrowserRouter>
   );

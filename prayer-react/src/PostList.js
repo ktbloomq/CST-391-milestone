@@ -5,7 +5,7 @@ const PostList = function (props) {
     console.log('posts', props.posts);
     const renderPosts = props.posts.map((post) => {
         return (
-            <Post post={post} key={post.postID} />
+            <Post post={post} key={post.postID} onDelete={props.onDelete} />
         );
     });
 
