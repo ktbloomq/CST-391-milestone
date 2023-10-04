@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Navbar from "./Navbar";
+import dataSource from "./dataSource";
+import PostList from "./PostList";
 
 function App() {
+  const [postList, setPostList] = useState([]);
+  const loadAlbums = async () => {
+    const response = await dataSource.get("/prayers");
+
+    setPostList(response.data);
+    console.log('posts', response.data);
+  };
+
+  useEffect(() => {
+    loadAlbums();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <div className="container">
+        <div className="row g-3">
+          <PostList posts={postList} />
+        </div>
+      </div>
+    </>
   );
 }
 
