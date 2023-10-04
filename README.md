@@ -1,6 +1,7 @@
 # CST-391 Milestone
-[https://github.com/ktbloomq/CST-391-milestone](https://github.com/ktbloomq/CST-391-milestone)
+### GCU milestone assignment for CST-391: JavaScript Web Application Development
 
+[https://github.com/ktbloomq/CST-391-milestone](https://github.com/ktbloomq/CST-391-milestone)
 
 PrayerHub social platform 
 
@@ -17,11 +18,11 @@ PrayerHub social platform
 My proposed app will be a public prayer request app. This app will let users send and receive prayer requests. When they post, they can decide weather or not to post anonymously. These prayers can be seen through a public feed and a friends feed. When users pray over that person, they can mark as prayed, or leave a reply.
 
 ## Recent Changes
-- Added PrayerHub app with Angular
-- Added posts page
-- Added create post page
-- Added like post button
-- Added delete post button
+- Ported PrayerHub app to React
+- Ported posts page
+- Ported new post page
+- Ported like post button
+- Ported delete post button
 
 ## Roadmap
 - [x] As a user, I want to post prayers so I can be supported by others
@@ -42,7 +43,7 @@ My proposed app will be a public prayer request app. This app will let users sen
 ![sitemap](./sitemap.drawio.png)
 
 
-## Angular UI Screenshots
+## React UI Screenshots
 
 ![homepage](./list%20prayers.png)
 
