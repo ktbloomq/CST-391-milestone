@@ -10,9 +10,11 @@ const PostList = function (props) {
     });
 
     return (
-        <>
-            {renderPosts}
-        </>
+        <div className="container">
+            <div className="row g-3">
+                {renderPosts}
+            </div>
+        </div>
     );
 };
 
