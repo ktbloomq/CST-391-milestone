@@ -1,8 +1,9 @@
 import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
-import logger from './middleware/middleware.logger';
 import cors from 'cors';
 import helmet from 'helmet';
+
+import logger from './middleware/middleware.logger';
 import prayersRouter from './prayers/prayers.routes';
 
 
