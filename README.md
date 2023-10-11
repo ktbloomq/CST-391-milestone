@@ -18,11 +18,7 @@ PrayerHub social platform
 My proposed app will be a public prayer request app. This app will let users send and receive prayer requests. When they post, they can decide weather or not to post anonymously. These prayers can be seen through a public feed and a friends feed. When users pray over that person, they can mark as prayed, or leave a reply.
 
 ## Recent Changes
-- Ported PrayerHub app to React
-- Ported posts page
-- Ported new post page
-- Ported like post button
-- Ported delete post button
+- implemented docker for testing and deployment
 
 ## Roadmap
 - [x] As a user, I want to post prayers so I can be supported by others
@@ -52,7 +48,7 @@ My proposed app will be a public prayer request app. This app will let users sen
 
 ## API Endpoints
 
-IMPORTANT! These endpoints are for testing purposes only. They currently represent an insecure api where anyone has permission to do anything. Security will be added in coming updates.
+IMPORTANT! This API is a proof of concept. As such, there is currently no implemented security. Any user can create or edit a post
 
 | | Endpoint | Description |
 | - | - | - |
